@@ -28,7 +28,7 @@ def get_numeric_var(var_request):
         var_text = var_response.message.text
         if var_text and var_text.isnumeric():
             break
-        var_response = yield f'Some thing wrong. {var_request}'
+        var_response = yield f'It is not numeric. {var_request}'
     return int(var_text)
 
 
